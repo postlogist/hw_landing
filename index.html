@@ -116,7 +116,6 @@
 
       /* --- Первый экран (Hero) --- */
       .hero {
-        /* НОВОЕ ИЗОБРАЖЕНИЕ */
         background-image: linear-gradient(
             rgba(0, 20, 40, 0.7),
             rgba(0, 20, 40, 0.7)
@@ -182,6 +181,8 @@
         border-radius: 50%;
         margin: 0 auto;
         display: block;
+        object-fit: cover; /* чтобы фото не искажалось */
+        aspect-ratio: 1 / 1; /* Делает изображение квадратным до обрезки */
       }
 
       /* --- Секция "Курсы" --- */
@@ -207,7 +208,7 @@
         list-style-type: "✓";
         padding-left: 20px;
         margin: 20px 0;
-        flex-grow: 1; /* Позволяет списку занимать доступное пространство */
+        flex-grow: 1;
       }
       .course-card li {
         margin-bottom: 10px;
@@ -216,7 +217,7 @@
       .course-card .btn {
         display: block;
         text-align: center;
-        margin-top: auto; /* Прижимает кнопку к низу */
+        margin-top: auto;
       }
 
       /* --- Секция "Отзывы" --- */
@@ -431,9 +432,10 @@
         <div class="container">
           <h2>Об авторе курсов</h2>
           <div class="about-author-grid">
+            <!-- ИЗМЕНЕННОЕ ФОТО -->
             <img
-              src="https://i.pravatar.cc/300"
-              alt="Фото эксперта"
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop"
+              alt="Фото эксперта Ивана Иванова"
               class="author-photo"
             />
             <div>
@@ -551,3 +553,4 @@
     </script>
   </body>
 </html>
+```
