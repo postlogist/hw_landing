@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Курсы по имитационному моделированию</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a class="text-xl font-bold text-gray-900" href="#">Иван Иванов</a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a class="text-gray-600 hover:text-sky-500 transition-colors" href="#"
+            >Для кого</a
+          >
+          <a class="text-gray-600 hover:text-sky-500 transition-colors" href="#"
+            >Курсы</a
+          >
+          <a class="text-gray-600 hover:text-sky-500 transition-colors" href="#"
+            >Об авторе</a
+          >
+          <a class="text-gray-600 hover:text-sky-500 transition-colors" href="#"
+            >Контакты</a
+          >
+        </nav>
+        <button class="md:hidden flex items-center">
+          <i class="material-icons">menu</i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section
+        class="relative bg-cover bg-center text-white"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        "
+      >
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
+        <div
+          class="container mx-auto px-4 py-32 md:py-48 text-center relative z-10"
+        >
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+            Принимайте верные бизнес-решения с помощью имитационного
+            моделирования
+          </h1>
+          <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
+            Практические курсы по AnyLogic и AnyLogistix для инженеров,
+            аналитиков и логистов от сертифицированного эксперта.
+          </p>
+          <a
+            class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+            href="#"
+            >Начать курс</a
+          >
+        </div>
+      </section>
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Кому подойдут курсы?
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="text-center p-8 border border-gray-200 rounded-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="mb-4 inline-flex items-center justify-center h-16 w-16 rounded-full bg-sky-100 text-sky-500"
+              >
+                <i class="material-icons text-3xl">school</i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Студентам</h3>
+              <p class="text-gray-600">
+                Получите востребованные навыки в IT, которые пригодятся в
+                перспективной области анализа и оптимизации.
+              </p>
+            </div>
+            <div
+              class="text-center p-8 border border-gray-200 rounded-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="mb-4 inline-flex items-center justify-center h-16 w-16 rounded-full bg-sky-100 text-sky-500"
+              >
+                <i class="material-icons text-3xl">business_center</i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Бизнес-аналитикам</h3>
+              <p class="text-gray-600">
+                Научитесь прогнозировать будущее компании и принимать решения на
+                основе данных, а не интуиции.
+              </p>
+            </div>
+            <div
+              class="text-center p-8 border border-gray-200 rounded-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="mb-4 inline-flex items-center justify-center h-16 w-16 rounded-full bg-sky-100 text-sky-500"
+              >
+                <i class="material-icons text-3xl">local_shipping</i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Логистам</h3>
+              <p class="text-gray-600">
+                Оптимизируйте цепочки поставок, склады или транспортные потоки с
+                помощью точных моделей.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Доступные курсы
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8 items-stretch">
+            <div
+              class="bg-white rounded-lg shadow-lg p-8 flex flex-col transform hover:-translate-y-2 transition-transform duration-300"
+            >
+              <h3 class="text-2xl font-bold mb-2">
+                Основы имитационного моделирования в Anylogic
+              </h3>
+              <p class="text-3xl font-bold text-sky-500 mb-6">20 000 ₽</p>
+              <ul class="space-y-4 text-gray-600 mb-8 flex-grow">
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span
+                    >Формат: синхронный онлайн-интенсив с видеозаписями
+                    уроков.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span
+                    >Знакомит с 3-мя парадигмами моделирования:
+                    дискретно-событийной, системной динамикой и агентной.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span>Развивает базовые навыки разработки моделей.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span>Возможно прохождение по корпоративной квоте.</span>
+                </li>
+              </ul>
+              <a
+                class="mt-auto w-full text-center bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                href="#"
+                >Записаться</a
+              >
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-xl p-8 flex flex-col border-2 border-sky-500 transform hover:-translate-y-2 transition-transform duration-300"
+            >
+              <span
+                class="bg-sky-500 text-white text-sm font-bold px-3 py-1 rounded-full self-start mb-4"
+                >Популярный</span
+              >
+              <h3 class="text-2xl font-bold mb-2">
+                Погружение в имитационное моделирование
+              </h3>
+              <p class="text-3xl font-bold text-sky-500 mb-6">50 000 ₽</p>
+              <ul class="space-y-4 text-gray-600 mb-8 flex-grow">
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span
+                    >Онлайн-практикум по моделированию с доступом в личный
+                    кабинет.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span
+                    >Разбор сложных концепций и сквозных проектов для
+                    закрепления материала.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span
+                    >Включает время для индивидуальных консультаций с
+                    преподавателем-экспертом.</span
+                  >
+                </li>
+              </ul>
+              <a
+                class="mt-auto w-full text-center bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                href="#"
+                >Записаться</a
+              >
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-lg p-8 flex flex-col transform hover:-translate-y-2 transition-transform duration-300"
+            >
+              <h3 class="text-2xl font-bold mb-2">
+                Моделирование цепей поставок в Anylogistix
+              </h3>
+              <p class="text-3xl font-bold text-sky-500 mb-6">40 000 ₽</p>
+              <ul class="space-y-4 text-gray-600 mb-8 flex-grow">
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span>Формат: синхронный онлайн-курс.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span
+                    >Применение AnyLogistix для решения практических
+                    бизнес-задач в цепях поставок.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span>Аналитическое и практическое ядро.</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="material-icons text-sky-500 mr-2 mt-1">check</i
+                  ><span
+                    >Предоставляются записи вебинаров и постоянный телеграм-чат
+                    для группы.</span
+                  >
+                </li>
+              </ul>
+              <a
+                class="mt-auto w-full text-center bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                href="#"
+                >Записаться</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+              <img
+                alt="Портрет Ивана Иванова"
+                class="rounded-full shadow-lg w-64 h-64 mx-auto object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvyiqmmo3fM_ZenhhN28PRYfQPYD5z3Wd1awbkNcoPBxYf3xCnYrhuNeYb16KeyaO7uOZ7mkynLicr55UXk9RcGYA9W-bbd1DEOB7j0kTgHF_y0iPHc9wYILQLnyavEXmBUWD_SN9BWsuO5iIaeG9zx6fQt_9i_RNUOptlowqoZZltBiV7BxgPS5lxWm_6rRDdDAMMA35VQIX60H3UoqKTDZvZw9WRM6Z0peKRBrtdRoxmkFQdx-JHeCdK9Qr7HalFqtK8IqBLN1U"
+              />
+            </div>
+            <div class="md:w-2/3">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Об авторе курсов
+              </h2>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Иван Иванов
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Эксперт по имитационному моделированию, сертифицированный
+                специалист AnyLogic и AnyLogistix. Более 10 лет я помогаю
+                крупным компаниям из ритейла, производства и логистики
+                оптимизировать их процессы. За это время я обучил более 500
+                специалистов, которые успешно применяют моделирование в своей
+                работе.
+              </p>
+              <p class="text-gray-600">
+                Моя цель — передать вам практические знания, которые вы сможете
+                сразу же использовать для решения реальных бизнес-задач.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+            Что говорят ученики
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="flex items-center mb-4">
+                <img
+                  alt="Фотография ученика"
+                  class="w-12 h-12 rounded-full mr-4 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9kurWfZS8NcqsPPBvp6HHYzyhwAisp6ieU61nb6iuC_otGet6vdvSBGMLxxirJoKGjdUOQj_9u__pBjrbk1YPxAlsc5F5roi0PjMEUXgy216mcep7eRRoQoVJgg8NeQhzvZ_-3ehJC3L2EfLkaqoT2F_9Ijx0UOCKZL3WSw2Qox83dfJxQqZ2SRD1jXt6rCdN9frIMbQW1c79FLm1D9niwE4E355jnu1KX7qB9M4rzo1J0qH7RUgJEFeRMB8CjB0NhBQtM66TAYk"
+                />
+                <div>
+                  <p class="font-semibold">Ольга Петрова</p>
+                  <p class="text-sm text-gray-500">Логист, "Компания Х"</p>
+                </div>
+              </div>
+              <p class="text-gray-600 italic">
+                "Отличный курс. Полученную информацию я структурировала, многое
+                стало понятно. Буду применять новые знания в работе для
+                оптимизации склада."
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="flex items-center mb-4">
+                <img
+                  alt="Фотография ученика"
+                  class="w-12 h-12 rounded-full mr-4 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyBvGHVR4ovtEbzLc834cTze2jzg1FbhDp3HxBp6zdsyp1spPMkLxuUBgHeeLrj5kTLhHP9nbrWHwmTWx_QqKIF9D7_cLD4sYWW3gCMpdrg0rLLEAJ7WyE4_HPObYoto9EpTQtj0_pgS_5D3-OroTzB8jQGBU9n-HMC0AQz92hxVg3FQBt73TD4PmzUFsF7ZZ78S81sEoAy7OQBD5-iG0Ihm4oI_kLxwaVltSlws7_Qk0Kmj1EmZctBIqoI9fXWczrEHqibqkkYgc"
+                />
+                <div>
+                  <p class="font-semibold">Михаил Сидоров</p>
+                  <p class="text-sm text-gray-500">
+                    Руководитель отдела логистики
+                  </p>
+                </div>
+              </div>
+              <p class="text-gray-600 italic">
+                "На курсе была дана та база, без которой мы имели перекос: умели
+                делать модели, но не хватало теории. Пробелы в знаниях удалось
+                закрыть, что очень положительно сказалось на результатах!"
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <div class="flex items-center mb-4">
+                <img
+                  alt="Фотография ученика"
+                  class="w-12 h-12 rounded-full mr-4 object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu-HF26mjUV4Bkxwiab3WdTwwBq_KxJ2BugSYe22b_iJT1bvne2y-SwnVXlmsHYUX9rUW8fK8e_9ShZ2nZDjqPOqEAMUx3_14BmKNCfuZPcDQSjOKRHOTQnUOKu2BESrAUq0NbFahVEJI3ErIh-Pfw_7hBnqrPE3sQAd0ZILcNRRTzvV-gs4JfBXkFdKVN5mU29OY81POgHRUneIZqFEiXFtU-iwj7FM18icVX-g6Ck-x-AH1fXoU43qxmarW3ijRhXhOZ6hkFgXo"
+                />
+                <div>
+                  <p class="font-semibold">Сергей Кузнецов</p>
+                  <p class="text-sm text-gray-500">Студент, МГТУ им. Баумана</p>
+                </div>
+              </div>
+              <p class="text-gray-600 italic">
+                "Понравилась индивидуальная консультация с Иваном: помогли
+                разобраться в сложной задаче и пройти внутреннюю аттестационную
+                комиссию. Спасибо!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 md:py-24 bg-sky-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Остались вопросы или готовы начать?
+          </h2>
+          <p class="text-lg mb-8 max-w-2xl mx-auto">
+            Оставьте заявку, и я свяжусь с вами в ближайшее время, чтобы
+            обсудить детали и подобрать подходящий курс.
+          </p>
+          <form class="max-w-xl mx-auto">
+            <div class="mb-4">
+              <input
+                class="w-full px-4 py-3 rounded-md bg-white bg-opacity-20 border border-transparent focus:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-300"
+                placeholder="Какой курс вас интересует?"
+                type="text"
+              />
+            </div>
+            <button
+              class="w-full bg-white hover:bg-gray-200 text-sky-700 font-bold py-3 px-8 rounded-md transition-colors"
+              type="submit"
+            >
+              Получить консультацию
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4 text-center text-gray-400">
+        <p>© 2025 Иван Иванов. Все права защищены.</p>
+        <p>Email: ivanov.expert@email.com | Телефон: +7 (999) 123-45-67</p>
+      </div>
+    </footer>
+  </body>
+</html>
