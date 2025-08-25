@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://postlogist.github.io/hw_landing/sitemap.xml
