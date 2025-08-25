@@ -522,7 +522,6 @@
           </p>
           <form class="contact-form">
             <input type="text" name="name" placeholder="Ваше имя" required />
-            <input type="email" name="email" placeholder="Ваш Email" required />
             <textarea
               name="message"
               rows="5"
@@ -543,13 +542,169 @@
     </footer>
 
     <script>
-      // --- Обработка формы (простой пример) ---
+      // --- Обработка формы с отправкой через email и Telegram ---
       const form = document.querySelector(".contact-form");
+
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        alert("Спасибо за вашу заявку! Я скоро с вами свяжусь.");
-        form.reset();
+
+        // Получаем данные формы
+        const formData = new FormData(form);
+        const name = formData.get("name") || "Не указано";
+        const message = formData.get("message") || "Сообщение не указано";
+
+        // Формируем текст сообщения
+        const messageText = `Новая заявка с сайта:
+        
+Имя: ${name}
+Сообщение: ${message}
+
+Дата: ${new Date().toLocaleString("ru-RU")}`;
+
+        // Создаем mailto ссылку
+        const emailSubject = encodeURIComponent("Заявка на курс с сайта");
+        const emailBody = encodeURIComponent(messageText);
+        const mailtoLink = `mailto:ivanov.expert@email.com?subject=${emailSubject}&body=${emailBody}`;
+
+        // Создаем Telegram ссылку
+        const telegramText = encodeURIComponent(messageText);
+        const telegramLink = `https://t.me/speleogleb?text=${telegramText}`;
+
+        // Показываем модальное окно с выбором способа отправки
+        showContactModal(mailtoLink, telegramLink, name);
       });
+
+      // Функция для показа модального окна с выбором способа отправки
+      function showContactModal(mailtoLink, telegramLink, userName) {
+        // Создаем модальное окно
+        const modal = document.createElement("div");
+        modal.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 10000;
+        `;
+
+        const modalContent = document.createElement("div");
+        modalContent.style.cssText = `
+          background: white;
+          padding: 30px;
+          border-radius: 10px;
+          max-width: 500px;
+          width: 90%;
+          text-align: center;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        `;
+
+        modalContent.innerHTML = `
+          <h3 style="color: var(--primary-color); margin-bottom: 20px;">
+            Спасибо за заявку, ${userName}!
+          </h3>
+          <p style="margin-bottom: 25px; color: var(--text-color);">
+            Выберите удобный способ отправки сообщения:
+          </p>
+          <div style="display: flex; gap: 15px; flex-direction: column;">
+            <button id="emailBtn" style="
+              padding: 12px 24px;
+              background-color: var(--secondary-color);
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-weight: bold;
+              cursor: pointer;
+              font-size: 16px;
+              transition: background-color 0.3s;
+            ">
+              📧 Отправить через Email
+            </button>
+            <button id="telegramBtn" style="
+              padding: 12px 24px;
+              background-color: #0088cc;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-weight: bold;
+              cursor: pointer;
+              font-size: 16px;
+              transition: background-color 0.3s;
+            ">
+              📱 Отправить через Telegram
+            </button>
+            <button id="closeBtn" style="
+              padding: 8px 16px;
+              background-color: #ccc;
+              color: #333;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-top: 10px;
+            ">
+              Закрыть
+            </button>
+          </div>
+          <p style="font-size: 14px; color: #666; margin-top: 15px;">
+            После нажатия кнопки откроется ваше приложение для отправки сообщения
+          </p>
+        `;
+
+        modal.appendChild(modalContent);
+        document.body.appendChild(modal);
+
+        // Обработчики событий для кнопок
+        document
+          .getElementById("emailBtn")
+          .addEventListener("click", function () {
+            window.location.href = mailtoLink;
+            closeModal();
+          });
+
+        document
+          .getElementById("telegramBtn")
+          .addEventListener("click", function () {
+            window.open(telegramLink, "_blank");
+            closeModal();
+          });
+
+        document
+          .getElementById("closeBtn")
+          .addEventListener("click", closeModal);
+
+        // Закрытие по клику на фон
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+
+        function closeModal() {
+          document.body.removeChild(modal);
+          form.reset();
+        }
+
+        // Добавляем hover эффекты
+        const emailBtn = document.getElementById("emailBtn");
+        const telegramBtn = document.getElementById("telegramBtn");
+
+        emailBtn.addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "#00acc1";
+        });
+        emailBtn.addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "var(--secondary-color)";
+        });
+
+        telegramBtn.addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "#006699";
+        });
+        telegramBtn.addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "#0088cc";
+        });
+      }
     </script>
   </body>
 </html>
