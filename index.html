@@ -660,7 +660,7 @@
         document
           .getElementById("emailBtn")
           .addEventListener("click", function () {
-            window.location.href = mailtoLink;
+            window.open(mailtoLink, "_self");
             closeModal();
           });
 
@@ -684,7 +684,6 @@
 
         function closeModal() {
           document.body.removeChild(modal);
-          form.reset();
         }
 
         // Добавляем hover эффекты
